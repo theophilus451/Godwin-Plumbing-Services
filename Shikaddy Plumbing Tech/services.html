@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shikaddy Plumbing Tech</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <div class="logo">
+                    <h1>Godwin</h1>
+
+                </div>
+                <ul class="menu-items">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<section class="services-page">
+    <div class="container">
+        <h2>Our Services</h2>
+        <p>We offer reliable plumbing solutions with professional service.</p>
+
+        <div class="service-cards">
+            <div class="service-card">
+                <i class="fas fa-tools fa-2x" style="color: #0a3871;"></i>
+                <h3>Pipe Repairs</h3>
+                <p>Quick and efficient pipe leak fixes and replacements with durable materials.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-bath fa-2x" style="color: #0a3871;"></i>
+                <h3>Bathroom Installations</h3>
+                <p>Expert installations of sinks, toilets, showers, and bathtubs to fit your needs.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-water fa-2x" style="color: #0a3871;"></i>
+                <h3>Drain Cleaning</h3>
+                <p>We handle clogged drains and ensure smooth water flow in your plumbing system.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-phone-volume fa-2x" style="color: #0a3871;"></i>
+                <h3>Emergency Services</h3>
+                <p>Need urgent help? We’re available 24/7 to fix major plumbing emergencies.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+        <button class="faq-question">What areas do you service?</button>
+        <div class="faq-answer">We provide plumbing services throughout Nigeria and nearby areas.</div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">Do you offer emergency services?</button>
+        <div class="faq-answer">Yes, we offer 24/7 emergency plumbing services. Call us anytime!</div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">How can I request a quote?</button>
+        <div class="faq-answer">You can use the contact form or WhatsApp link to request a free quote.</div>
+    </div>
+</section>
+
+<a href="https://wa.me/2349125893201" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+
+
+    <footer>
+        <p>&copy; 2025 Shikaddy Plumbing Tech Cooperations | All rights reserved</p>
+        <p><i class="fas fa-phone"></i> +23491 2589 3201 | <i class="fas fa-envelope"></i> contact@godwinplumbing.com</p>
+    </footer>
+    <script>
+        const questions = document.querySelectorAll(".faq-question");
+
+        questions.forEach(q => {
+            q.addEventListener("click", () => {
+                const answer = q.nextElementSibling;
+                answer.style.display = answer.style.display === "block" ? "none" : "block";
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
+    
+    </body>
+    
+    </html>

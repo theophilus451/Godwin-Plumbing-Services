@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Godwin Plumbing Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="navbar">
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <div class="logo">
+                    <h1>Godwin</h1>
+                </div>
+                <div class="menu-items">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2>Contact Godwin</h2>
+            <p>We’re ready to help. Drop us a message or reach out directly!</p>
+
+        <div class="contact-form">
+        <form action="https://formsubmit.co/godwinsosusika@gmail.com" method="POST">
+
+
+                <input type="text" name="name" placeholder="Your Full Name" required />
+                <input type="email" name="email" placeholder="Your Email Address" required />
+                <input type="tel" name="phone" placeholder="Your Phone Number" required />
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <div id="form-response"></div>
+        </div>
+
+<div class="success-message" id="successMessage">
+    <p>Thanks for contacting Godwin! We’ll get back to you soon.</p>
+</div>
+
+            <div class="contact-info">
+                <p><strong>Phone:</strong> +23491 2589 3201</p>
+                <p><strong>Email:</strong> godwinsosusika@gmail.com</p>
+                <p><strong>Address:</strong> 123 Waterline Street, Lagos, Nigeria</p>
+            </div>
+        </div>
+    </section>
+    
+<a href="https://wa.me/2349125893201?text=Hello,%20I%20need%20plumbing%20services." target="_blank"
+    class="whatsapp-button">
+    Chat with us on WhatsApp
+</a>
+
+    <div class="map-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.9914022599043!2d3.3915318145170265!3d6.524379324289483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c610b9911cb%3A0x1fd1df2745cf3be!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1617086637321!5m2!1sen!2sng"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
+<a href="https://wa.me/2349125893201" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+
+        <footer>
+            <p>&copy; 2025 Shikaddy Plumbing Tech Cooperations | All rights reserved</p>
+            <p><i class="fas fa-phone"></i> +23491 2589 3201 | <i class="fas fa-envelope"></i> contact@godwinplumbing.com</p>
+        </footer>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            let formData = new FormData(this);
+
+            fetch('send-email.php', {
+                method: 'POST',
+                body: formData,
+            })
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('form-response').innerHTML = data;
+                })
+                .catch(error => {
+                    document.getElementById('form-response').innerHTML = "<div class='alert-error'>Error: Could not send message.</div>";
+                });
+        });
+    </script>
+
+</body>
+
+</html>
